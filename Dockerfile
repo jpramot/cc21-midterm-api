@@ -1,5 +1,5 @@
 # ใช้ OpenJDK 17
-FROM eclipse-temurin:17-jdk-alpine
+FROM eclipse-temurin:21-jdk-alpine
 
 # ตั้ง working directory
 WORKDIR /app
