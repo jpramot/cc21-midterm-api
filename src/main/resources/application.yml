@@ -1,0 +1,31 @@
+server:
+    port: ${SERVER_PORT:8080}
+spring:
+  application:
+    name: todo-api
+  main:
+    banner-mode: off
+  datasource:
+
+#    url: jdbc:mysql://cc20.c9moegsg66br.ap-southeast-1.rds.amazonaws.com:3306/cc20_todo_database
+#    username: admin
+#    password: cc20-midterm
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 3
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+logging:
+  pattern:
+    console: ${LOGPATTERN_CONSOLE:%green(%d{HH:mm:ss.SSS}) %blue(%-5level) %red([%thread]) %yellow(%logger{15}) - %msg%n}
+
+JWT:
+  SECRET: ${JWT_SECRET:ljaowarhiwegrkhlYUGIEWBlaihfanoaiherblbeapoiarpiakheaiowrhr}
+  EXPIRATION: ${JWT_EXPIRATION:86400}
