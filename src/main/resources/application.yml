@@ -10,7 +10,7 @@ spring:
 #    url: jdbc:mysql://cc20.c9moegsg66br.ap-southeast-1.rds.amazonaws.com:3306/cc20_todo_database
 #    username: admin
 #    password: cc20-midterm
-    url: ${DB_URL}
+    url: jdbc:mysql://${DB_HOST}:${DB_PORT}/${DB_NAME}?useSSL=true&requireSSL=true
     username: ${DB_USERNAME}
     password: ${DB_PASSWORD}
     hikari:
