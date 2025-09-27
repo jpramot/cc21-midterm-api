@@ -14,4 +14,4 @@ RUN ./mvnw clean package -DskipTests
 EXPOSE 8080
 
 # start spring boot
-CMD ["java", "-Dserver.port=$PORT", "-jar", "target/api-0.0.1-SNAPSHOT.jar"]
+CMD java -Dserver.port=$PORT -jar target/api-0.0.1-SNAPSHOT.jar
